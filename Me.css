@@ -1,0 +1,103 @@
+body{
+    background: url(Fond_PC.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+.header{
+    position: fixed;
+	top: 30px;
+	left: 50px;
+    width: 7.5rem;
+    z-index: 10;
+    height: 500px;
+}
+
+
+.topnav {
+  position: fixed;
+  top: 20px;
+  left: 40px;
+  overflow: hidden;
+  display: block;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  color: aliceblue;
+  height: 15px;
+  text-align: left;
+  padding: 28px 16px;
+  text-decoration: none;
+  font-size: 14px;
+  font-family: Helvetica Neue, 'Segoe UI', sans-serif;
+  margin: auto;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+
+  color: black;
+
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+  color: aliceblue;
+}
+
+
+.Titre h2{
+    text-align: center,justify;
+    color: aliceblue;
+    filter: drop-shadow(0 0 10px rgba(0,0,0,.3));
+    font-size: 38px;
+    word-break: break-all;
+    position: fixed;
+    top: 150px;
+    left: 430px;
+}
+
+.Titre h4{
+    text-align: center,justify;
+    color: aliceblue;
+    filter: drop-shadow(0 0 10px rgba(0,0,0,.3));
+    font-size: 18px;
+    word-break: break-all;
+    position: fixed;
+    top: 100px;
+    left: 550px;
+}
+
+.return img{
+    position: fixed;
+    bottom: 155px;
+    height: 65px;
+    width: 65px;
+    right: 750px;
+}
+
+.after img{
+    position: fixed;
+    bottom: 155px;
+    height: 65px;
+    width: 65px;
+    right: 450px;
+}
+
+.play img{
+    position: fixed;
+    bottom: 150px;
+    height: 80px;
+    width: 80px;
+    left: 615px;
+}
+
+.play audio{
+    display: none;
+}

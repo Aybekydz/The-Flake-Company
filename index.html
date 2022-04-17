@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="Me.css" />
+        <link rel="icon" type="image/png" sizes="16x16" href=Aybek.jpg>
+        <title>Aybek Yildiz</title>
+    
+    </head>
+
+<body>
+    <div class="topnav">
+    
+        <strong><a class="active" href="index.html">Home</a>
+            <a href="#">Products</a>
+            <a href="CTOS.html">CTOS</a>
+            <a href="#">Contact</a>
+        </strong>
+      </div>
+    
+    <section>
+        
+        <div class="Titre">
+            
+            <h2>Welcome to the world of lovers</h2>
+            <h4>Choose your mood.</h4>
+                
+        </div>
+    
+    </section>
+    
+    <section>
+        
+        <div class="Music">
+            
+            <div class="return">
+                <img src="Return_Music.png">    
+            </div>
+
+            <div class="after">
+                <a href="AfterMusic.html"><img src="After_Music.png"/></a>
+            </div>
+            
+            <div class="play">                
+                
+                <audio id="bloc_son" controls="controls" preload="none">
+                    <source src="musique.mp3" type="audio/mp3" />
+                </audio>
+                
+                <script>
+                    var bloc_son = document.getElementById("bloc_son");
+                        var isPlaying = false;
+
+                        function togglePlay() {
+                        
+                            isPlaying ? bloc_son.pause() : bloc_son.play();
+                        
+                        };
+
+                        bloc_son.onplaying = function() {
+                        
+                            isPlaying = true;
+                        
+                        };
+                        bloc_son.onpause = function() {
+                        
+                            isPlaying = false;
+                        
+                        };
+
+                </script>
+
+                <img src="Play.png" onclick="togglePlay();" />
+
+            </div>
+        </div>
+    </section>
+</body>
+</html>
+
+<style>
+    body{
+    background: url(Fond_PC.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+.header{
+    position: fixed;
+	top: 30px;
+	left: 50px;
+    width: 7.5rem;
+    z-index: 10;
+    height: 500px;
+}
+
+
+.topnav {
+  position: fixed;
+  top: 20px;
+  left: 40px;
+  overflow: hidden;
+  display: block;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  color: aliceblue;
+  height: 15px;
+  text-align: left;
+  padding: 28px 16px;
+  text-decoration: none;
+  font-size: 14px;
+  font-family: Helvetica Neue, 'Segoe UI', sans-serif;
+  margin: auto;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+
+  color: black;
+
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+  color: aliceblue;
+}
+
+
+.Titre h2{
+    text-align: center,justify;
+    color: aliceblue;
+    filter: drop-shadow(0 0 10px rgba(0,0,0,.3));
+    font-size: 38px;
+    word-break: break-all;
+    position: fixed;
+    top: 150px;
+    left: 365px;
+}
+
+.Titre h4{
+    text-align: center,justify;
+    color: aliceblue;
+    filter: drop-shadow(0 0 10px rgba(0,0,0,.3));
+    font-size: 18px;
+    word-break: break-all;
+    position: fixed;
+    top: 100px;
+    left: 550px;
+}
+
+.return img{
+    position: fixed;
+    bottom: 155px;
+    height: 65px;
+    width: 65px;
+    right: 760px;
+}
+
+.after img{
+    position: fixed;
+    bottom: 155px;
+    height: 65px;
+    width: 65px;
+    right: 460px;
+}
+
+.play img{
+    position: fixed;
+    bottom: 145px;
+    height: 80px;
+    width: 80px;
+    left: 605px;
+}
+
+.play audio{
+    display: none;
+}
+
+</style>
+

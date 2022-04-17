@@ -1,0 +1,83 @@
+body {
+    background-color: #000000;
+    font-family: Helvetica;
+    margin: 0;
+    padding: 0;
+    height: 1000px;
+  }
+  .logo{
+    height: 100px;
+    position: absolute;
+    left: 60px;
+    top: 30px;
+    
+  }
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Helvetica;
+    outline: none;
+    border: none;
+  }
+  body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  header{
+    overflow: hidden;
+  }
+  .links{
+    display: grid;
+    grid-template-columns: repeat(var(--items), 1fr);
+    position: absolute;
+    top: 60px;
+    left: 200px;
+    background-color: #000000;
+    font-weight:  150;
+  }
+  .links a{
+    font-size:  1.25em;
+    color: #425a72;
+    padding: .75em;
+    text-align: center;
+    text-decoration: none;
+    transition:  all 0.5s;
+  }
+  .links a:hover{
+    color:  #adf;
+  }
+  .links .line{
+    background-color: #adf;
+    height: 1px;
+    pointer-events: none;
+    opacity:  0;
+    transition: all 0.5s cubic-bezier(1, 2, 0.2, 0.6);
+    position: absolute;
+    bottom: 0;
+    left: var(--left, calc(100%/var(--items) * (var(--index) - 1)));
+    width: var(--width, calc(100% / var(--items)));
+    --index: 0;
+  }
+  .links a:hover ~ .line{
+    opacity: 1;
+  }
+  .links a:nth-of-type(1):hover~.line{
+    --index: 1;
+  }
+  .links a:nth-of-type(2):hover~.line{
+    --index: 2;
+  }.links a:nth-of-type(3):hover~.line{
+    --index: 3;
+  }.links a:nth-of-type(4):hover~.line{
+    --index: 4;
+  }.links a:nth-of-type(5):hover~.line{
+    --index: 5;
+  }
+  .navbox{
+    left: 100px;
+    margin: 0;
+    padding: 0;
+    display: block;
+  }

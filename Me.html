@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" />
+        <link rel="icon" type="image/png" sizes="16x16" href=logo.jpg>
+        <title>Flake</title>
+    </head>
+
+<body>
+  <header>
+    <div class="navbox">
+    <img class="logo" src="logo.jpg"/>
+    <div class="links" style="--items: 5;"> 
+      <a href="Accueil.html">Home</a>
+      <a href="#">Products</a>
+      <a href="CTOS.html">CTOS</a>
+      <a href="Me.html">Aybek</a>
+      <a href="#">Contact</a>
+      <span class="line"></span>
+    </div>
+  </div>
+  </header>
+
+
+    <h2 class="productname">
+      The ColdBook 
+      </h2>
+      <h3 class="productname">
+        We've created something wild 
+      </h3> 
+ </div>
+ <div class="frozenphone">
+  <img class="frozenphone" src="ColdBook.png">
+ </div>
+
+ <div class="trailer">
+ <video width="300px" height="150px" src="trailer_phone.mp4" controls preload="auto"> </video>
+   <h3>The New Era</h3>
+  </div>
+
+
+
+  <svg id="space" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+  viewBox="0 0 180.7 180.7" enable-background="new 0 0 180.7 180.7" xml:space="preserve">
+<g id="Layer_1">
+</g>
+<g id="rings">
+ <circle opacity="0.26" fill="none" stroke="#565249" stroke-miterlimit="10" cx="89.9" cy="90.3" r="44.9"/>
+ <circle opacity="0.26" fill="none" stroke="#565249" stroke-miterlimit="10" cx="89.9" cy="90.3" r="36.2"/>
+</g>
+
+<g transform="translate(89.9,45.4)">
+ <g id="moon" transform="rotate(0)"> 
+   <circle fill="#BFD6DD" r="4.1"/>
+ </g>
+</g>
+<g id="planet">
+ <g>
+   <circle fill="#EA7759" cx="89.9" cy="90" r="19.5"/>
+   <path fill="#FC845C" d="M89.9,70.5v23.1H109c0.2-1.2,0.3-2.4,0.3-3.6C109.4,79.3,100.6,70.5,89.9,70.5z"/>
+   <path fill="#EA7759" d="M89.9,109.5c9.5,0,17.5-6.9,19.2-15.9H89.9V109.5z"/>
+   <path fill="#935B4C" d="M70.7,93.6c1.1,5.7,4.6,10.5,9.4,13.3V93.6H70.7z"/>
+   <path fill="#C96653" d="M89.9,93.6h-9.8v13.3c2.9,1.7,6.2,2.6,9.8,2.6V93.6z"/>
+   <path fill="#C96653" d="M80.1,73.1v20.5h-9.4C70.7,93.6,67.7,80.4,80.1,73.1z"/>
+   <path fill="#FC995C" d="M89.9,83.4h18.3c0,0-3.8-12.3-18.3-12.9"/>
+   <path fill="#FCB45C" d="M99,82.1l0-9.2c0,0,6.3,2.6,9.2,10.5H99V82.1z"/>
+   <path fill="#EFCEC5" d="M99,77.5h5.9c0,0-2.2-3.1-5.8-4.6L99,77.5z"/>
+ </g>
+ <rect x="155.1" y="170.1" fill="#BFD6DD" width="1" height="1.8"/>
+</g>
+</svg>
+<script type="text/javascript" src="index.js"></script>
+
+
+<style>
+  body {
+    background: rgb(0,0,0);
+  font-family: Helvetica;
+  margin: 0;
+  padding: 0;
+
+}
+.logo{
+  height: 100px;
+  position: absolute;
+  left: 60px;
+  top: 30px;
+  
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Helvetica;
+  outline: none;
+  border: none;
+}
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header{
+  overflow: hidden;
+}
+.links{
+  display: grid;
+  grid-template-columns: repeat(var(--items), 1fr);
+  position: absolute;
+  top: 50px;
+  left: 200px;
+  background-color: #000000;
+  font-weight:  150;
+}
+.links a{
+  font-size:  1.25em;
+  color: snow;
+  padding: .75em;
+  text-align: center;
+  text-decoration: none;
+  transition:  all 0.5s;
+}
+.links a:hover{
+  color:  white;
+}
+.links .line{
+  background-color: snow;
+  height: 1px;
+  pointer-events: none;
+  opacity:  0;
+  transition: all 0.5s cubic-bezier(1, 2, 0.2, 0.6);
+  position: absolute;
+  bottom: 0;
+  left: var(--left, calc(100%/var(--items) * (var(--index) - 1)));
+  width: var(--width, calc(100% / var(--items)));
+  --index: 0;
+}
+.links a:hover ~ .line{
+  opacity: 1;
+}
+.links a:nth-of-type(1):hover~.line{
+  --index: 1;
+}
+.links a:nth-of-type(2):hover~.line{
+  --index: 2;
+}.links a:nth-of-type(3):hover~.line{
+  --index: 3;
+}.links a:nth-of-type(4):hover~.line{
+  --index: 4;
+}.links a:nth-of-type(5):hover~.line{
+  --index: 5;
+}
+.navbox{
+  left: 100px;
+  margin: 0;
+  padding: 0;
+  display: block;
+}
+
+.productname {
+  color: rgb(255, 255, 255);
+  text-shadow: 3px 0px 7px rgba(81,67,21,0.8), 
+  -3px 0px 7px rgba(81,67,21,0.8), 
+  0px 4px 7px rgba(81,67,21,0.8);
+
+}
+
+/* Additional styling */
+  
+
+h2 {
+  position: absolute;
+  top: 170px;
+  right: 320px;
+  text-transform: uppercase;
+}
+  
+h3 {
+  position: absolute;
+  top: 230px;
+  right: 200px;
+  text-transform: uppercase;
+}
+.frozenphone img{
+  height: 300px;
+  width: 500px;
+  position: absolute;
+  top: 200px;
+  left: 200px;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+::-webkit-scrollbar-button {
+  width: 0px;
+  height: 0px;
+}
+::-webkit-scrollbar-thumb {
+  background: #adf;
+  border: 31px none #adf;
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #adf;
+}
+::-webkit-scrollbar-thumb:active {
+  background: #adf;
+}
+::-webkit-scrollbar-track {
+  background: #adf;
+  border: 1px solid #adf;
+  border-radius: 5px;
+}
+::-webkit-scrollbar-track:hover {
+  background: #adf;
+}
+::-webkit-scrollbar-track:active {
+  background: #adf;
+}
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
+video{
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  top: 400px;
+  right: 180px;
+}
+.trailer h3{
+  color: rgb(255, 255, 255);
+  text-shadow:
+      0 0 7px #344688,
+      0 0 10px #344688,
+      0 0 21px #344688,
+      0 0 42px #344688,
+      0 0 82px #344688,
+      0 0 92px #344688,
+      0 0 102px #344688,
+      0 0 151px #344688;
+  position: absolute;
+  top: 350px;
+  right: 200px;
+  text-transform: uppercase;
+}
+
+#space{
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  width:80px;
+  right:150px;
+}
+</style>
+
+
+
+<!---
+#############################
+
+AYBEK YILDIZ
+PROJET FLAKE
+
+############################# 
+-->
